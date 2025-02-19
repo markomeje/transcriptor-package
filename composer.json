@@ -1,0 +1,41 @@
+{
+    "name": "markomeje/transcriptor-package",
+    "autoload": {
+        "psr-4": {
+            "Omeje\\Transcriptor\\": "src/"
+        },
+        "files": [
+            "vendor/pestphp/pest/src/Functions.php",
+            "vendor/mockery/mockery/library/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "markomeje",
+            "email": "markomejeonline@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^3.7",
+        "phpstan/phpstan": "^1.11",
+        "laravel/pint": "^1.17",
+        "orchestra/testbench": "*",
+        "mockery/mockery": "^1.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "pint": [
+            "./vendor/bin/pint --config pint.json"
+        ],
+        "stan": [
+            "./vendor/bin/phpstan analyse -- ./src"
+        ],
+        "test": [
+            "./vendor/bin/pest"
+        ]
+    }
+}
